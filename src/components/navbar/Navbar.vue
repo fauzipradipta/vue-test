@@ -1,5 +1,4 @@
 <script>
-import { RouterLink } from 'vue-router';
     export default{
     name: "navbar",
 
@@ -10,9 +9,9 @@ import { RouterLink } from 'vue-router';
 <template>
   <nav class="navbar">
     <div class="navbar-left">
-      <!-- <router-link>求人検索</router-link>
-      <router-link>人材を見つける</router-link>
-      <router-link>企業</router-link> -->
+      <span>求人検索</span>
+      <span>人材を見つける</span>
+      <span>企業</span>
     </div>
 
     <div class="navbar-center">
@@ -20,7 +19,7 @@ import { RouterLink } from 'vue-router';
     </div>
 
     <div class="navbar-right">
-      <router-link to="/login">ログイン</router-link>
+      <span to="/login">ログイン</span>
       <button class="cta-button">今すぐ参加</button>
     </div>
   </nav>
@@ -34,8 +33,10 @@ import { RouterLink } from 'vue-router';
   align-items: center;
   padding: 10px 20px;
   border-bottom: 1px solid #007bff;
-  margin: auto;
+  margin-bottom: 50vw;
+  margin-left: -75%;
   font-family: Inter;
+  width: 350%; 
 }
 
 .navbar-left,

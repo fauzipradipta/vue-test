@@ -7,20 +7,21 @@
 <template>
     <div class="search-input">
         <div class="input-container">
-            
-            <input  
+            <img src="../assets/SearchIcon.png" class ="icon"/>
+            <input 
                 v-model="keyword"
                 type="text"
                 placeholder="職種またはキーワード"
-                class="input-field"
+                class="search-job-input"
             />
         </div>
-        <div class="input-container">
+        <div class="location-input-container">
+            <img src="../assets/location.png" class="location-icon"/>
             <input
                 v-model="location"
                 type="text"
                 placeholder="東京都 足立区"
-                class="input-field"
+                class="location-input"
             />
             <button @click="performSearch" class="search-button">検索</button>
         </div>
@@ -29,32 +30,52 @@
 
 <style scoped>
     .search-input{
+       
+        height: 72px;
         display: flex;
-        align-items: center;
-        gap: 10px;
-        border-radius: 5px;
-        margin-top: 100px;
-        /* background-color: #E5F1FF;
-        margin-right: 150vh; */
+        background-color: #E5F1FF;
+        width: 117%;        
+        margin-left: -39%;
+        border-radius: 5px;  
+        border-color: #E5F1FF; 
+    }
+
+    .input-container, .location-input-container {
+        display: flex;
+        padding: 5px;
+        border: none;
+        border-radius: 4px;    
+        margin-left: 10%;   
         
     }
-
-    .input-container {
-        display: flex;
-        gap: 10px;
+    .location-input-container{
+        margin-left: 6%; 
     }
 
-    .input-field {
+    .search-job-input, .location-input {
         flex: 1; 
         padding: 8px;
-        border: 1px solid #ccc;
+        width: 276px; 
+        height: 51px;
         border-radius: 4px;
+        background-color: #E5F1FF;
+        border: none #E5F1FF ;
     }
 
+    .location-input{
+        left: 10%;
+    }
     .icon {
-    position: absolute;
-    left: 10px;
-    color: #1f73d4;
+        position: absolute;        
+        left: 26%;
+        top:31vw;
+        color: #1E6FDA;
+    }
+    .location-icon {
+        position: absolute;
+        right:55%;
+        top:31vw;
+        color: #1E6FDA;
     }
 
     .search-button {
@@ -62,9 +83,10 @@
         color: #fff;
         padding: 8px 20px;
         border: none;
-        border-radius: 30px;
+        border-radius: 26px;
         cursor: pointer;
         font-size: 14px;
-        width: 90px;
+        width: 134px;
+        right: 10%;
     }
 </style>

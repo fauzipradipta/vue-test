@@ -3,39 +3,45 @@ import Navbar from'./components/navbar/Navbar.vue';
 import HeaderTitle from './components/HeaderTitle.vue';
 import SearchBar from './components/SearchBar.vue';
 import Featured from './components/Featured.vue';
+import EmployeerJobPosting from './components/EmployeerJobPosting.vue';
+
 </script>
 
 <template>
-  <header>
+  <header class="header">
+        <navbar/>
+  </header>  
     
-    <navbar/>
-      <div class="title-header">
-         <header-title/>
-        
+  <div class="body">
+      <div class="header-title">
+         <HeaderTitle/>
       </div>
+
       <div class="searchBar">
         <search-bar/>
       </div>
-      <Featured/>
+      <div class="featured">
+        <Featured/>
+      </div>
       
-  </header>
-  
-  <body>
-     
-  </body>
- 
+
+
+  </div>
 </template>
 
 <style scoped>
-.title-header{
-  margin-top: 100px;
-}
-/* .searchBar{
-  margin-top: 100px;
-  background-color: #E5F1FF;
-  margin-right: 150vh;
-  display: flex;
-  justify-content: center;
-} */
 
+.searchBar{
+  margin-left: -11vw; 
+  margin-top: 6vw;
+}
+
+.header-title{
+  margin-top: 10vw;
+  margin-left: -82vw;
+}
+
+.featured{
+  margin-left: -26vw;
+}
 </style> 

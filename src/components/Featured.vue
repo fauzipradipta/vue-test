@@ -1,10 +1,13 @@
 <script>
 import CardComponent from "./card/CardComponent.vue";
+import EmployeerCardComponent from "./card/EmployeerCardComponent.vue";
+import EmployeerJobPosting from "./EmployeerJobPosting.vue";
 
     export default{
         name:"Featured",
         components:{
-            CardComponent
+            CardComponent,
+            EmployeerJobPosting
         },
         data(){
             return{
@@ -40,6 +43,17 @@ import CardComponent from "./card/CardComponent.vue";
     <div class="card-list">
         <CardComponent v-for="item in cards" :key="item.id" :data="item"/> 
     </div>
+
+     <div class="employers">
+        <h1> 雇用者向け:</h1>
+        <div>
+            <EmployeerJobPosting/>
+        </div>
+    </div> 
+    
+    <footer>
+
+    </footer>
 </template>
 
 <style>
@@ -48,11 +62,16 @@ import CardComponent from "./card/CardComponent.vue";
         flex-wrap: wrap;
         gap: 16px;
         justify-content: center;
-        padding: 16px;
+        margin-left: -1vw;   
     }
 
     .job-seeker{
         padding-top: 48px;
-        font-family: 'Times New Roman', Times, serif;
     }
+
+    .employers{
+        margin-top: 4vw;
+    }
+
+    
 </style>
